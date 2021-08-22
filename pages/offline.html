@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#90ee90">
+    <meta name="theme-color" content="#90ee90">
+    <style>
+        /* Global Styles */
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* text selection color */
+        ::-moz-selection {
+            background: rgba(64, 64, 64, 0.75);
+            color: #fff;
+        }
+
+        ::selection {
+            background: rgba(64, 64, 64, 0.75);
+            color: #fff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: mediumseagreen;
+            color: seagreen;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: auto;
+            margin-bottom: auto;
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .visual-div {
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info-div {
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+            color: darkgreen;
+        }
+
+        .para {
+            font-size: 10vw;
+            color: green;
+            padding: 1vw;
+        }
+
+        .info-para {
+            font-size: 1.5vw;
+            padding: 1.5vw;
+            padding-top: 0.1vw;
+            margin-top: -1.5vw;
+            margin-bottom: 1.5vw;
+        }
+        .info-para span {
+            color: rgb(0, 50, 0);
+        }
+
+        .btn-div {
+            padding: 2vw;
+        }
+
+        .btn-div a {
+            font-size: 1.5vw;
+            border-radius: 2vw;
+            padding: 0.9vw 2.7vw;
+            transition: 0.3s;
+            background-color: rgba(120, 166, 0, 0.125);
+            color: darkgreen;
+            border: 0.2vw solid darkgreen;
+        }
+
+        @media (max-width: 800px) {
+
+            .para {
+                font-size: 20vw;
+            }
+
+            .info-para {
+                font-size: 5vw;
+                padding: 1.5vw;
+            }
+
+            .btn-div {
+                margin-top: 2vw;
+                padding: 6vw;
+            }
+
+            .btn-div a {
+                font-size: 4vw;
+                border-radius: 6vw;
+                padding: 2vw 6vw;
+                transition: 0.3s;
+                border: 0.6vw solid darkgreen;
+            }
+        }
+    </style>
+
+    <title>Pwa Webapp</title>
+</head>
+
+<body>
+    <main>
+        <section class="hero-section">
+            <div class="visual-div">
+                <p class="para">¯\_</p>
+                <p class="para">&#40;ツ&#41;</p>
+                <p class="para">_/¯</p>
+            </div>
+            <div class="info-div">
+                <p class="info-para"><span>You seem to be offline!</span> <br> Check your internet connection or try relaoding the
+                    page.</p>
+            </div>
+            <div class="btn-div">
+                <a href="/">Refresh</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

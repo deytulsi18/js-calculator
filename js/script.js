@@ -1,3 +1,10 @@
+// REGISTER SERVICE WORKER
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('service worker registered'))
+        .catch(err => console.log('service worker not registered', err));
+}
+
 
 // SELECT ELEMENTS
 const input_element = document.querySelector('.input');
@@ -186,11 +193,11 @@ function calculator(button) {
         data.formula.push(button.formula);
     } else if (button.type == "math_function") {
         let symbol, formula;
-            symbol = button.symbol + "(";
-            formula = button.formula + "(";
-            data.operation.push(symbol);
-            data.formula.push(formula);
-        
+        symbol = button.symbol + "(";
+        formula = button.formula + "(";
+        data.operation.push(symbol);
+        data.formula.push(formula);
+
     } else if (button.type == "key") {
         if (button.name == "clear") {
             data.operation = [];
@@ -199,7 +206,7 @@ function calculator(button) {
         } else if (button.name == "delete") {
             data.operation.pop();
             data.formula.pop();
-        } 
+        }
     } else if (button.type == "calculate") {
         formula_str = data.formula.join('');
 
@@ -233,5 +240,5 @@ function updateOutputOperation(operation) {
 function updateOutputResult(result) {
     result = parseFloat(result.toFixed(15));
     output_result_element.innerHTML = result;
-    
+
 }

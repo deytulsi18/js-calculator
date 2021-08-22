@@ -1,9 +1,30 @@
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
+
+/* text selection color */
+::-moz-selection {
+  background: rgba(64, 64, 64, 0.75);
+  color: #fff;
+}
+
+::selection {
+  background: rgba(64, 64, 64, 0.75);
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   background-color: #333;
